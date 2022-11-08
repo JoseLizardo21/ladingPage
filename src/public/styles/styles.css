@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #29659a;
+    height: 100vh;
+    overflow: hidden;
+}
+nav {
+    width: 100%;
+    background-color:#14100e;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+}
+#separador{
+    flex: 1;
+}
+#descargar{
+    border: 0;
+    background-color: #05cc1b;
+    font-size: 18px;
+    color: white;
+    padding: 0 30px;
+    cursor: pointer;
+}
+#descargar:hover, #btnRe:hover{
+    background-color: #04aa18;
+}
+#acceIns{
+    border: 0;
+    background-color: rgba(255, 235, 205, 0);
+    cursor: pointer;
+    padding: 0 30px;
+    color: white;
+    font-size: 13px;
+}
+#acceIns:hover{
+    background-color: #29211c;
+}
+#iconMass{
+    width: 70px;
+    padding: 0 15px;
+}
+.cont{
+    background-image: url("../images/fondo.png");
+    background-size: 2000px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+.div1{
+    margin-left: 30px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.div2{
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+#text1, #text2{
+    color: white;
+}
+#text1{
+    font-size: 27px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+#text2{
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+#btnRe{
+    cursor: pointer;
+    margin-top: 15px;
+    background-color: #05cc1b;
+    border: 0;
+    color: white;
+    font-size: 33px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 20px;
+}
+.cels{
+    position: absolute;
+    transition-duration: 1s;
+}
+/* #cel1{
+    z-index: 1;
+    margin-top: 400px;
+}
+#cel2{
+    z-index: 2;
+    margin-left: 250px;
+    margin-top: 400px;
+}
+#cel3{
+    z-index: 3;
+    margin-left: 180px;
+    margin-top: -400px;
+}
+#cel4{
+    z-index: 4;
+    margin-left: 450px;
+    margin-top: -400px;
+} */
+#cel1{
+    z-index: 1;
+    width: 500px;
+    margin-top: 400px;
+}
+#cel2{
+    z-index: 2;
+    margin-left: 800px;
+    margin-top: 65px;
+    width: 500px;
+}
+#cel3{
+    z-index: 3;
+    margin-left: 800px;
+    margin-top: 0px;
+    width: 500px;
+}
+#cel4{
+    z-index: 4;
+    margin-left: 350px;
+    margin-top: -800px;
+    width: 500px;
+}
