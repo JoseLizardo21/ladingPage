@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -93,25 +93,6 @@ nav {
     position: absolute;
     transition-duration: 1s;
 }
-/* #cel1{
-    z-index: 1;
-    margin-top: 400px;
-}
-#cel2{
-    z-index: 2;
-    margin-left: 250px;
-    margin-top: 400px;
-}
-#cel3{
-    z-index: 3;
-    margin-left: 180px;
-    margin-top: -400px;
-}
-#cel4{
-    z-index: 4;
-    margin-left: 450px;
-    margin-top: -400px;
-} */
 #cel1{
     z-index: 1;
     width: 500px;
