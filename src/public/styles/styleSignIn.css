@@ -1,7 +1,7 @@
 #contFormSignIn{
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    flex: 1;
     justify-content: center;
     align-items: center;
     background-color: rgba(7, 7, 7, 0.654);
