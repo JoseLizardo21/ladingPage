@@ -4,10 +4,10 @@ function inicio(){
     const img3 = document.getElementById("cel3");
     const img4 = document.getElementById("cel4");
     setTimeout(()=>{
-        img1.style.marginTop = "65px";
-        img2.style.marginLeft = "250px";
+        img1.style.marginTop = "250px";
+        img2.style.marginLeft = "400px";
         img3.style.marginLeft = "100px";
-        img4.style.marginTop = "0px";
+        img4.style.marginTop = "-100px";
     }, 500)
 }
 window.addEventListener("load", inicio);

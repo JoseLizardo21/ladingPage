@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(7, 7, 7, 0.654);
+    background-image: url('../images/fondo2.png');
 }
 #formRegister{
     display: flex;
