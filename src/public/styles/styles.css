@@ -125,3 +125,56 @@ nav {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
+@media (max-width: 768px){
+    .div1{
+        width: 400px;
+    }
+    #text1{
+        font-size: 18px;
+    }
+    #text2{
+        font-size: 28px;
+    }
+    #btnRe{
+        font-size: 20px;
+    }
+}
+@media (max-width: 480px) { 
+    .div1{
+        position: absolute;
+        height: 100vh;
+        z-index: 6;
+        width: 100vw;
+        margin-left: 0;
+        background-color: #18161579;
+    }
+    #text1{
+        margin-left: 20px;
+        font-size: 16px;
+    }
+    #text2{
+        margin-left: 20px;
+        font-size: 24px;
+    }
+    #btnRe{
+        margin-left: 20px;
+        font-size: 18px;
+        width: 350px;
+        margin-bottom: 90px;
+    }
+    nav {
+        height: 50px;
+    }
+    #descargar{
+        font-size: 12px;
+        padding: 0 15px;
+    }
+    #acceIns{
+        padding: 0 15px;
+        font-size: 12px;
+    }
+    #iconMass{
+        width: 50px;
+        padding: 0 10px;
+    }
+} 
