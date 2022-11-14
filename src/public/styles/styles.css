@@ -180,3 +180,8 @@ nav {
         padding: 0 10px;
     }
 } 
+@media (max-height: 580px){
+    .cont{
+        height: 600px;
+    }
+}
