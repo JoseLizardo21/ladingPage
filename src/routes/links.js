@@ -3,6 +3,14 @@ const pool = require('../database');
 const transporter = require("../config/mailer.js")
 
 const router = Router();
+
+router.get('/', (req, res)=>{
+  res.render('index');
+});
+router.get('/n', (req, res)=>{
+  res.render('prueba');
+})
+
 router.post('/preregistro', async(req, res)=>{
   const {name, email, email2, numberTel} = req.body;
   const newUser = {
@@ -19,7 +27,8 @@ router.post('/preregistro', async(req, res)=>{
           text: `Hola ${name}, ya te has preregistrado, muy pronto te contactaremos`, // plain text body
           html: `<h1>Hola ${name}, ya te has preregistrado, muy pronto te contactaremos</h1>`, // html body
         })
-        res.send("Usted ha sido pregistrado correctamente");
+        req.flash('Success', 'Se preregistró correctamente');
+        res.redirect('/');
     } catch (error) {
         res.send("Ha ocurrido algún error, intentelo más tarde")
     }

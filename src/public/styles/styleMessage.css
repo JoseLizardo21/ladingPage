@@ -1,0 +1,39 @@
+#cont-ZMessage{
+    position: fixed;
+    z-index: 8;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.635);
+}
+.contMessageSuccess{
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 80px;
+    border-radius: 5px;
+}
+.cont-btn-x{
+    display: flex;
+    justify-content: end;
+}
+#btnXMessage{
+    border: 0;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+    color: rgb(172, 41, 41);
+    cursor: pointer;
+}
+.MessageText{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: rgb(82, 143, 82);
+}
