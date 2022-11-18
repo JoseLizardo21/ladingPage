@@ -30,10 +30,12 @@ router.post('/preregistro', async(req, res)=>{
         req.flash('Success', 'Se preregistró correctamente');
         res.redirect('/');
     } catch (error) {
-        res.send("Ha ocurrido algún error, intentelo más tarde")
+        req.flash('MesCorreoRe', 'Ha ocurrido algún error, intentalo más tarde');
+        res.redirect('/');
     }
   }else{
-    res.send("Los correos son diferentes");
+    req.flash('MesCorreoRe', 'Los correos son diferentes');
+    res.redirect('/');
   }
 });
 
