@@ -21,27 +21,32 @@ router.post('/preregistro', async(req, res)=>{
       req.flash('MesCorreoRe', 'El gmail ya ha sido resgistrado anteriormente');
       res.redirect('/#contFormSignIn');
     }else{
-      if(newUser.numberTel.length == 9 && newUser.numberTel[0] == 9){
-        try {
-            await pool.query('INSERT INTO usersPre set ?', [newUser]);
-            await transporter.sendMail({
-              from: '"Se preregistró correctamente 👻" <jose.lizardo21.cont@gmail.com>', // sender address
-              to: email, // list of receivers
-              subject: "Hello ✔", // Subject line
-              text: `Hola ${name}, ya te has preregistrado, muy pronto te contactaremos`, // plain text body
-              html: `<h1>Hola ${name}, ya te has preregistrado, muy pronto te contactaremos</h1>`, // html body
-            })
-            req.flash('Success', 'Se preregistró correctamente');
-            res.redirect('/#contFormSignIn');
-        } catch (error) {
-            req.flash('MesCorreoRe', 'Ha ocurrido algún error, intentalo más tarde');
-            res.redirect('/#contFormSignIn');
-        }
-      }else{
-        req.flash('MesCorreoRe', 'El número de telefono no es válido');
+      const row2 = await pool.query("SELECT * FROM usersPre where numberTel = ?", [newUser.numberTel]);
+      if(row2.length > 0){
+        req.flash('MesCorreoRe', 'El número ya ha sido  registrado anteriormente');
         res.redirect('/#contFormSignIn');
+      }else{
+        if(newUser.numberTel.length == 9 && newUser.numberTel[0] == 9){
+          try {
+              await pool.query('INSERT INTO usersPre set ?', [newUser]);
+              await transporter.sendMail({
+                from: '"Se preregistró correctamente 👻" <jose.lizardo21.cont@gmail.com>', // sender address
+                to: email, // list of receivers
+                subject: "Hello ✔", // Subject line
+                text: `Hola ${name}, ya te has preregistrado, muy pronto te contactaremos`, // plain text body
+                html: `<h1>Hola ${name}, ya te has preregistrado, muy pronto te contactaremos</h1>`, // html body
+              })
+              req.flash('Success', 'Se preregistró correctamente');
+              res.redirect('/#contFormSignIn');
+          } catch (error) {
+              req.flash('MesCorreoRe', 'Ha ocurrido algún error, intentalo más tarde');
+              res.redirect('/#contFormSignIn');
+          }
+        }else{
+          req.flash('MesCorreoRe', 'El número de telefono no es válido');
+          res.redirect('/#contFormSignIn');
+        }
       }
-
     }
   }else{
     req.flash('MesCorreoRe', 'Los correos son diferentes');
