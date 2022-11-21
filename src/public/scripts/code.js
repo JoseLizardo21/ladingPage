@@ -9,10 +9,12 @@ function inicio(){
         img3.style.marginLeft = "100px";
         img4.style.marginTop = "-100px";
     }, 500);
-    let btnx = document.getElementById("btnXMessage");
-    btnx.addEventListener('click', cerrar);
+    let cerrar = document.getElementById("cerrar");
+    let lo_tengo = document.getElementById("lo_tengo");
+    lo_tengo.addEventListener('click', cerrarVent);
+    cerrar.addEventListener('click', cerrarVent);
 }
-function cerrar(){
+function cerrarVent(){
     const ventMensaje = document.getElementById('cont-ZMessage');
     ventMensaje.style.visibility = 'hidden'
 }

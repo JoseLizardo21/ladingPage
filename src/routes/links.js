@@ -7,6 +7,9 @@ const router = Router();
 router.get('/', (req, res)=>{
   res.render('index');
 });
+router.get('/n', (req,res)=>{
+  res.render('prueba');
+});
 
 router.post('/preregistro', async(req, res)=>{
   const {name, email, email2, numberTel} = req.body;
