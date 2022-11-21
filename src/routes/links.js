@@ -37,7 +37,15 @@ router.post('/preregistro', async(req, res)=>{
                 to: email, // list of receivers
                 subject: "Hello ✔", // Subject line
                 text: `Hola ${name}, ya te has preregistrado, muy pronto te contactaremos`, // plain text body
-                html: `<h1>Hola ${name}, ya te has preregistrado, muy pronto te contactaremos</h1>`, // html body
+                html: `<img src="cid:prueba">`, 
+                // html body
+                attachments: [
+                  {
+                  filename: 'MessageGmail.png',
+                  path: __dirname + '/MessageGmail.png',
+                  cid: 'prueba'
+             },
+            ]
               })
               req.flash('Success', 'Se preregistró correctamente');
               res.redirect('/#contFormSignIn');
