@@ -9,10 +9,15 @@ function inicio(){
         img3.style.marginLeft = "100px";
         img4.style.marginTop = "-100px";
     }, 500);
-    let cerrar = document.getElementById("cerrar");
-    let lo_tengo = document.getElementById("lo_tengo");
-    lo_tengo.addEventListener('click', cerrarVent);
-    cerrar.addEventListener('click', cerrarVent);
+    const cerrar = document.getElementById("cerrar");
+    if(cerrar != null)cerrar.addEventListener('click', cerrarVent);
+
+    const lo_tengo = document.getElementById("lo_tengo");
+    if(lo_tengo != null)lo_tengo.addEventListener('click', cerrarVent);
+
+    const cerrar2  = document.getElementById("cerrar2");
+    if(cerrar2 != null)cerrar2.addEventListener('click', cerrarVent);
+
 }
 function cerrarVent(){
     const ventMensaje = document.getElementById('cont-ZMessage');

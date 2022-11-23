@@ -15,14 +15,17 @@
 </div>
 {{/if}}
 {{#if MesCorreoRe}}
-    <div id="cont-ZMessage">
-        <div class="contMessageSuccess">
-            <div class="cont-btn-x">
-                <button id="btnXMessage">X</button>
-            </div>
-            <div class="MessageTextRe">
-                {{MesCorreoRe}}
-            </div>
+<div id="cont-ZMessage">
+    <div class="contMessageSuccess">
+        <img src="/images/ERROR.png" alt="" id="campanaNoti">
+        <div class="MessageText">
+            <p>ERROR</p>
+            <p>{{MesCorreoRe}}</p>
+        </div>
+        <div class="rectDeco"></div>
+        <div class="btnsCerrar">
+            <button id="cerrar2">Aceptar</button>
         </div>
     </div>
+</div>
 {{/if}}
