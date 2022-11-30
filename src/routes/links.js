@@ -33,10 +33,10 @@ router.post('/preregistro', async(req, res)=>{
           try {
               await pool.query('INSERT INTO usersPre set ?', [newUser]);
               await transporter.sendMail({
-                from: '"Se preregistró correctamente 👻" <developer2.mass@gmail.com>', // sender address
+                from: '"Usted ha realizado correctamente el registro previo de MASS👻" <developer2.mass@gmail.com>', // sender address
                 to: email, // list of receivers
-                subject: "Hello ✔", // Subject line
-                text: `Hola ${name}, ya te has preregistrado, muy pronto te contactaremos`, // plain text body
+                subject: "Has tomado la mejor decisión>>", // Subject line
+                text: `Hola ${name}, realizaste tu registro previo correctamente, muy pronto te contactaremos`, // plain text body
                 html: `<img src="cid:prueba">`, 
                 // html body
                 attachments: [
