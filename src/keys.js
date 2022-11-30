@@ -1,8 +1,11 @@
+if(process.env.NODE_ENV != 'production'){
+    require('dotenv').config()
+}
 module.exports = {
     database: {
-        host: 'database-1.c8cfoujwdena.us-east-1.rds.amazonaws.com',
-        user: 'admin',
-        password: 'admin12345678',
-        database: 'Preregistro'
+        host: process.env.HOST,
+        user: process.env.USER,
+        password: process.env.PASSWORD,
+        database: process.env.DATABASE
     }
 }
